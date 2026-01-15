@@ -1,0 +1,11 @@
+id: reuse/duplicate-block
+level: warning
+description: "Flag duplicated blocks and suggest shared component"
+files:
+  include:
+    - "slidev/**/*.md"
+    - "slidev/components/**/*.vue"
+detector: duplicated-block-detector
+fix:
+  type: templateRef
+  path: docs/templates/shared-snippet.md

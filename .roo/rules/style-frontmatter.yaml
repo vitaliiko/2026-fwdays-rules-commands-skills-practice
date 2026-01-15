@@ -1,0 +1,10 @@
+id: style/md-frontmatter
+level: warning
+description: "Ensure frontmatter exists and contains title, theme, and duration when applicable"
+files:
+  include:
+    - "slidev/**/*.md"
+detector: frontmatter-check
+fix:
+  type: templateRef
+  path: docs/templates/slide-frontmatter.md

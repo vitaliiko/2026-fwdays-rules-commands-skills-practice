@@ -1,0 +1,10 @@
+id: ci/integrate-roocode
+level: info
+description: "CI integration guidance for running Roocode rules"
+files:
+  include:
+    - ".github/workflows/**"
+detector: ci-check
+fix:
+  type: templateRef
+  path: docs/templates/ci-job-example.md

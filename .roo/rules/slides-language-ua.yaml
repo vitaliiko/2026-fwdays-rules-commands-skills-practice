@@ -1,0 +1,13 @@
+id: slides/language-ua
+level: error
+description: "Slides must be written in Ukrainian"
+files:
+  include:
+    - "slidev/**/*.md"
+detector: language-detect
+options:
+  lang: uk
+  threshold: 0.8
+fix:
+  type: templateRef
+  path: docs/templates/translation-note.md
