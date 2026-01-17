@@ -20,6 +20,17 @@
 - **Backgrounds**: Set in frontmatter: `image: ./assets/bg.jpg`.
 - **Logic**: Use standard HTML or Vue components for complex interactions.
 
+### Assets Handling
+- You may use static assets (images, videos) in your slides. Slidev (Vite-based) allows direct imports in markdown using relative paths:
+  - `![alt](./image.png)`
+  - `<img src="./image.png" />`
+- These will be resolved to `/BASE_URL/assets/image.png` after build.
+- **Do NOT** use relative paths for assets in frontmatter or component props (e.g., `background: ./image.png` or `<Comp src="./image.png" />`)—these will break after build.
+- To use assets in frontmatter or component props, place them in the `public/` folder and use an absolute path:
+  - `background: /image.png`
+  - `<Comp src="/image.png" />`
+- See [Slidev Assets Guide](https://sli.dev/guide/asset.html) for details.
+
 ## Code & Transitions
 - **Code**: Use fenced code blocks with language tags (e.g., `ts`, `html`) for Shiki highlighting.
 - **Transitions**: Define `transition: name` in frontmatter (globally or per slide).

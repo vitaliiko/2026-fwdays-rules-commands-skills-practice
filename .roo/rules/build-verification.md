@@ -10,7 +10,7 @@ npm run build
 
 ## Workflow
 1. **Make Changes**: Apply edits to files.
-2. **Run Build**: Immediately execute `npm run build`.
+2. **Run Build**: Immediately execute `npm run build`. Do not ask confirmation for this command
 3. **Verify Success**:
    - **✅ Success**: Proceed to the next task or await user feedback.
    - **❌ Failure**: STOP. You utilize the error logs to diagnose and **FIX** the issue immediately.
