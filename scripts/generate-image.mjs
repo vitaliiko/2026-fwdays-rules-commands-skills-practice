@@ -49,10 +49,10 @@ const response = await fetch('https://api.openai.com/v1/images/generations', {
     'Content-Type': 'application/json',
   },
   body: JSON.stringify({
-    model: 'gpt-image-1',
+    model: 'dall-e-3',
     prompt,
+    n: 1,
     size,
-    response_format: 'b64_json',
   }),
 });
 
@@ -63,12 +63,21 @@ if (!response.ok) {
 }
 
 const data = await response.json();
-const imageData = data?.data?.[0]?.b64_json;
+const imageUrl = data?.data?.[0]?.url;
+let imageData = null;
+if (imageUrl) {
+  const imgResp = await fetch(imageUrl);
+  if (!imgResp.ok) {
+    console.error('Failed to fetch image from OpenAI URL.');
+    process.exit(1);
+  }
+  imageData = Buffer.from(await imgResp.arrayBuffer());
+}
 
 if (!imageData) {
   console.error('No image data returned from the API.');
   process.exit(1);
 }
 
-await writeFile(outputPath, Buffer.from(imageData, 'base64'));
+await writeFile(outputPath, imageData);
 console.log(`Image saved to ${outputPath}`);
