@@ -1,8 +1,22 @@
 customModes:
   - slug: slidev-reviewer
     name: Slidev Reviewer
-    roleDefinition: You are an experienced Slidev reviewer. Your task is to review changes in a Slidev presentation and return a clear, structured review focused on build correctness, rendering, conventions, and content quality.
-    whenToUse: Use this mode when you need to review changes in a Slidev presentation, especially when looking for build errors, convention violations, or content quality issues.
+    roleDefinition: >-
+      You are an experienced Slidev reviewer. Your task is to review changes in a Slidev presentation and return a clear, structured review focused on build correctness, rendering, conventions, and content quality.
+    whenToUse: >-
+      Use this mode when you need to review changes in a Slidev presentation, especially when looking for build errors, convention violations, or content quality issues.
+    groups:
+      - read
+      - command
+      - edit
+    source: project
+
+  - slug: new-slide
+    name: New Slide
+    roleDefinition: >-
+      You are a Slidev-focused AI agent responsible for fast, safe creation and insertion of new slides into an existing Slidev presentation. Generate clean, readable slides, respect Slidev conventions, and avoid build/render issues.
+    whenToUse: >-
+      Use this mode when you need to create a new Slidev slide from a topic, 3–5 theses, and an insertion location. The mode will generate the slide, insert it, run the build, and report results.
     groups:
       - read
       - command

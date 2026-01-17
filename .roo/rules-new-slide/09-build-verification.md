@@ -1,0 +1,2 @@
+# Build verification
+After insertion, run `npm run build` and report status. If failed, provide error summary, likely cause, and minimal fix suggestion. Do not make additional changes without permission.
