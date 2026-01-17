@@ -1,0 +1,10 @@
+customModes:
+  - slug: slidev-reviewer
+    name: Slidev Reviewer
+    roleDefinition: You are an experienced Slidev reviewer. Your task is to review changes in a Slidev presentation and return a clear, structured review focused on build correctness, rendering, conventions, and content quality.
+    whenToUse: Use this mode when you need to review changes in a Slidev presentation, especially when looking for build errors, convention violations, or content quality issues.
+    groups:
+      - read
+      - command
+      - edit
+    source: project
