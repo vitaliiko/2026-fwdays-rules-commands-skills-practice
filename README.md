@@ -1,4 +1,3 @@
-# Задача
+# Agentic IDE with Roo Code and Copilot
 
-Зроби презентацію за допомогою https://sli.dev/ 
-На тему "Правила, команди та навички для Agentic IDE"
+See the presentation here: https://vitaliiko.github.io/2026-fwdays-rules-commands-skills-practice/
