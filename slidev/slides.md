@@ -6,9 +6,13 @@ drawings:
   persist: false
 ---
 
-# Правила, команди та навички для Agentic IDE
-
-Масштабування розробки з AI-агентами в VS Code
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
+  <div style="flex: 1;">
+    <h1 style="font-size: 3rem; font-weight: bold; margin-bottom: 1rem;">Правила, команди та навички для Agentic IDE</h1>
+    Масштабування розробки з AI-агентами в VS Code
+  </div>
+  <img src="/generated/dev-and-kangaroo-tasks.png" alt="Розробник і кенгуру борються з багатьма завданнями" style="width: 400px; max-width: 45vw; height: auto; object-fit: contain;" />
+</div>
 
 <!--
 Це вступна слайд презентації про те, як налаштувати IDE для ефективної роботи з AI-помічниками. Мета - навчити розробників використовувати правила, команди та навички для максимізації продуктивності.
