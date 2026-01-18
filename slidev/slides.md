@@ -411,6 +411,23 @@ Copilot - це набір інструментів, не один. Inline доп
 
 </v-clicks>
 
+<div style="width:100%; max-width:900px; margin:0 auto;">
+
+```mermaid {scale: 0.6}
+sequenceDiagram
+  participant Architect
+  participant Developer
+  participant Debugger
+  participant Docs
+  Architect->>Developer: Планує функцію резервування
+  Developer->>Developer: Додає поле reserved_by
+  Developer->>Developer: Реалізує reserve_book
+  Debugger->>Developer: Аналізує причину проблеми
+  Developer->>Docs: Викликає /gen-api-docs
+```
+
+</div>
+
 <!--
 Copilot простіший і безпечніший для початківців. Якщо скажете "створи мені новий модуль з такими-то файлами", Copilot не зможе створювати файли сам - вам доведеться робити це поетапно. Це перевага для безпеки, але недолік для швидкості.
 -->
@@ -546,6 +563,18 @@ Copilot простіший і безпечніший для початківці
 5. Команда: `/gen-api-docs` для документації
 
 </v-clicks>
+
+<div style="width:100%; max-width:900px; margin:0 auto;">
+
+```mermaid {scale: 0.6}
+flowchart LR
+    A[Сплановує] --> B[Додає reserved_by]
+    B --> C[Реалізує reserve_book]
+    C --> D[Дебажить]
+    D --> E[Докементує]
+```
+
+</div>
 
 <!--
 Це демонструє повний цикл: планування → реалізація → тестування → документування. Кожен крок - це окремий запит у відповідному режимі. Така послідовність більш ефективна, ніж одна гігантська команда.
