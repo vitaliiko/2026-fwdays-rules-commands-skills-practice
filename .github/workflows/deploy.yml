@@ -38,7 +38,12 @@ jobs:
       - name: Build Slidev
         run: |
           cd slidev
-          npm run build -- --base /${{ github.event.repository.name }}/
+          npm run build
+
+      - name: Create 404 fallback
+        run: |
+          # ensure index is copied to 404 so GitHub Pages serves the SPA for unknown paths
+          cp ./slidev/dist/index.html ./slidev/dist/404.html
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
